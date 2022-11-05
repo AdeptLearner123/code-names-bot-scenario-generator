@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "code-names-bot-scenario-generator"
+version = "0.1.0"
+description = ""
+authors = ["Nalu Zou"]
+readme = "README.md"
+packages = [{include = "code_names_bot_scenario_generator"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+black = "^22.8.0"
+isort = "^5.10.1"
+PyYAML = "^6.0"
+
+[tool.poetry.scripts]
+format                                  = "tasks:format"
+
+confirmer                               = "code_names_bot_scenario_generator.confirmer:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
